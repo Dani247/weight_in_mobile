@@ -16,31 +16,41 @@ export default function TabLayout() {
         tabBarActiveTintColor: 'black',
       }}>
       <Tabs.Screen
-        name="index"
+        name="Home"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color="gray"
-                    style={[styles.headerRight, { opacity: pressed ? 0.5 : 1 }]}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          header: () => <></>,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          // headerRight: () => (
+          //   <Link href="/modal" asChild>
+          //     <Pressable>
+          //       {({ pressed }) => (
+          //         <FontAwesome
+          //           name="info-circle"
+          //           size={25}
+          //           color="gray"
+          //           style={[styles.headerRight, { opacity: pressed ? 0.5 : 1 }]}
+          //         />
+          //       )}
+          //     </Pressable>
+          //   </Link>
+          // ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="Logs"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          header: () => <></>,
+          title: 'Logs',
+          tabBarIcon: ({ color }) => <TabBarIcon name="table" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Settings"
+        options={{
+          header: () => <></>,
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cogs" color={color} />,
         }}
       />
     </Tabs>
